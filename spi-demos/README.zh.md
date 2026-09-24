@@ -55,7 +55,7 @@ unirtos-cli new -r unirtos-spi-demos -v 1.0.0
 ### 3. 进入工程并编译
 
 ```bash
-cd unirtos-spi-demos-1.0.0/example/unirtos-spi-demos
+cd unirtos-spi-demos-1.0.0/spi-demos
 unirtos-cli env-setup
 unirtos-cli build
 ```

@@ -1,4 +1,4 @@
-# unirtos-spi-nor-demos
+# unirtos-spi-demos
 
 [中文](README.zh.md) | English
 
@@ -6,13 +6,12 @@ This repository is recommended to be used via the unirtos-cli demo workflow to e
 
 ## Feature Description
 
-This demo demonstrates the basic development workflow for SPI NOR Flash on UniRTOS, and is suitable as a beginner example for external Flash memory management and high-capacity storage applications.
+This demo demonstrates the basic development workflow for SPI communication on UniRTOS, and is suitable as a beginner example for SPI peripheral debugging and high-speed serial interface development.
 
-- Demonstrates SPI pin function configuration (MOSI, MISO, CLK, CS) and SPI NOR Flash interface initialization at 812.5 KHz
-- Demonstrates reading Flash device ID for hardware identification and verification
-- Demonstrates sector-level erase, byte/block-level write, and read operations
-- Includes error handling and demonstrates verifying read data consistency
-- Easily extensible to firmware storage, file system implementation, FOTA upgrades, and high-capacity data logging
+- Demonstrates SPI pin function configuration (CS, CLK, MOSI, MISO) and channel initialization at 13 MHz
+- Demonstrates loopback test with MOSI/MISO short-circuited to verify basic data integrity
+- Supports multiple test cases: clock rate switching, polarity/phase (CPOL/CPHA) configuration, NSS mode switching, bit order (MSB/LSB) switching, data width switching, and large packet transmission
+- Easily extensible to flash memory access, display driver interfacing, sensor data acquisition, and high-throughput data transfer
 
 ## Quick Start
 
@@ -56,7 +55,7 @@ unirtos-cli new -r unirtos-spi-demos -v 1.0.0
 ### 3. Enter the Project and Build
 
 ```bash
-cd unirtos-spi-demos-1.0.0/example/unirtos-spi-nor-demos
+cd unirtos-spi-demos-1.0.0/spi-demos
 unirtos-cli env-setup
 unirtos-cli build
 ```
